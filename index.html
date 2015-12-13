@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Go3 by wangfakang</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Go3</h1>
+        <p class="header">goalng type judge</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/wangfakang/go3/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/wangfakang/go3/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/wangfakang/go3">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/wangfakang">wangfakang</a></p>
+
+
+      </header>
+      <section>
+        <p><code>Go语言中怎样判断数据类型</code></p>
+
+<p>要判断数据类型，可以用Go的空接口：<br>
+建一个函数t 设置参数i 的类型为空接口，空接口可以接受任何数据类型   </p>
+
+<h1>
+<a id="方法一-----" class="anchor" href="#%E6%96%B9%E6%B3%95%E4%B8%80-----" aria-hidden="true"><span class="octicon octicon-link"></span></a>方法一:     </h1>
+
+<pre lang="golang"><code>func type_judge(i interface{}) {    //函数type_judge 有一个参数i 
+    switch i.(type) {      //多选语句switch
+    case string:
+        print("type is string")
+    case int:
+        print("type is int")
+    }
+    return
+}
+
+i.(type) 只能在switch中使用
+</code></pre>
+
+<h1>
+<a id="方法二----" class="anchor" href="#%E6%96%B9%E6%B3%95%E4%BA%8C----" aria-hidden="true"><span class="octicon octicon-link"></span></a>方法二:    </h1>
+
+<p>还可以用反射：</p>
+
+<pre lang="golang"><code>package main
+
+import (
+        "fmt"
+        "reflect"
+)
+
+func main() {
+        var x float64 = 3.4
+        fmt.Println("type:", reflect.TypeOf(x))
+}
+</code></pre>
+
+<p>这样就可以得出变量x的类型信息，与上面不同的是：上面的方法要先知到它是几个类型中的一个，而这个方法可以对
+任意对象使用.        </p>
+
+<h1>
+<a id="欢迎一起交流学习" class="anchor" href="#%E6%AC%A2%E8%BF%8E%E4%B8%80%E8%B5%B7%E4%BA%A4%E6%B5%81%E5%AD%A6%E4%B9%A0" aria-hidden="true"><span class="octicon octicon-link"></span></a>欢迎一起交流学习　　</h1>
+
+<p>在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流</p>
+
+<ul>
+<li>邮件(1031379296#qq.com, 把#换成@)</li>
+<li>QQ: 1031379296</li>
+<li>weibo: <a href="http://weibo.com/u/2786211992/home">@王发康</a>
+</li>
+</ul>
+
+<h1>
+<a id="thx" class="anchor" href="#thx" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thx</h1>
+
+<ul>
+<li>chunshengsterATgmail.com</li>
+</ul>
+
+<h1>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h1>
+
+<ul>
+<li>Linux\nginx\golang\c\c++爱好者</li>
+<li>欢迎一起交流  一起学习# </li>
+<li>Others say good and Others good</li>
+</ul>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("goalng type judge 类型判断");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
